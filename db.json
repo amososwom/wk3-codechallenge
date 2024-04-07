@@ -1,0 +1,165 @@
+{
+  "films": [],
+  "tickets": [
+    {
+      "id": "a974",
+      "film_id": "10",
+      "number_of_tickets": 34
+    },
+    {
+      "id": "49ca",
+      "film_id": "10",
+      "number_of_tickets": 33
+    },
+    {
+      "id": "7c32",
+      "film_id": "10",
+      "number_of_tickets": 32
+    },
+    {
+      "id": "bfa3",
+      "film_id": "10",
+      "number_of_tickets": 31
+    },
+    {
+      "id": "eaf6",
+      "film_id": "10",
+      "number_of_tickets": 30
+    },
+    {
+      "id": "797c",
+      "film_id": "10",
+      "number_of_tickets": 29
+    },
+    {
+      "id": "0cfa",
+      "film_id": "10",
+      "number_of_tickets": 28
+    },
+    {
+      "id": "317a",
+      "film_id": "10",
+      "number_of_tickets": 27
+    },
+    {
+      "id": "9168",
+      "film_id": "10",
+      "number_of_tickets": 26
+    },
+    {
+      "id": "1084",
+      "film_id": "10",
+      "number_of_tickets": 25
+    },
+    {
+      "id": "0d66",
+      "film_id": "10",
+      "number_of_tickets": 24
+    },
+    {
+      "id": "3a3a",
+      "film_id": "10",
+      "number_of_tickets": 22
+    },
+    {
+      "id": "6876",
+      "film_id": "10",
+      "number_of_tickets": 21
+    },
+    {
+      "id": "eea3",
+      "film_id": "10",
+      "number_of_tickets": 20
+    },
+    {
+      "id": "deee",
+      "film_id": "10",
+      "number_of_tickets": 19
+    },
+    {
+      "id": "659c",
+      "film_id": "10",
+      "number_of_tickets": 18
+    },
+    {
+      "id": "c57a",
+      "film_id": "10",
+      "number_of_tickets": 17
+    },
+    {
+      "id": "714a",
+      "film_id": "10",
+      "number_of_tickets": 16
+    },
+    {
+      "id": "7faa",
+      "film_id": "10",
+      "number_of_tickets": 15
+    },
+    {
+      "id": "346e",
+      "film_id": "10",
+      "number_of_tickets": 14
+    },
+    {
+      "id": "05f6",
+      "film_id": "10",
+      "number_of_tickets": 13
+    },
+    {
+      "id": "b150",
+      "film_id": "10",
+      "number_of_tickets": 12
+    },
+    {
+      "id": "0574",
+      "film_id": "10",
+      "number_of_tickets": 11
+    },
+    {
+      "id": "6cee",
+      "film_id": "14",
+      "number_of_tickets": 29
+    },
+    {
+      "id": "a0c4",
+      "film_id": "14",
+      "number_of_tickets": 28
+    },
+    {
+      "id": "f7cb",
+      "film_id": "14",
+      "number_of_tickets": 27
+    },
+    {
+      "id": "cf1c",
+      "film_id": "14",
+      "number_of_tickets": 26
+    },
+    {
+      "id": "d3a3",
+      "film_id": "14",
+      "number_of_tickets": 25
+    },
+    {
+      "id": "0fb5",
+      "film_id": "14",
+      "number_of_tickets": 24
+    },
+    {
+      "id": "34e4",
+      "film_id": "14",
+      "number_of_tickets": 23
+    },
+    {
+      "id": "5f58",
+      "film_id": "14",
+      "number_of_tickets": 22
+    },
+    {
+      "id": "af97",
+      "film_id": "14",
+      "number_of_tickets": 21
+    }
+  ]
+}
