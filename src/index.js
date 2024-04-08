@@ -159,4 +159,6 @@ function deleteMovie(movie){
     .catch (e => console.log(e.message));
 }
 
-// if yoo using my code you need to update 1 things to work
+
+// git remote add origin <git@github.com:amososwom/wk3-codechallenge.git>
+
