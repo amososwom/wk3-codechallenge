@@ -1,17 +1,15 @@
-# (Swap-Case, Genarate-Array, Return-Prime Numbers)
+# (FLATDANGO MOVIE SSHOP)
 
 #### Date, 2024/04/07
 
 #### By *Amos Omwando Oswo*
 
 ## Description
-This are three different project including (Swap-Case, Genarate-Array, Return-Prime Numbers) that have diffrent output and i have documented below;
-
-#### => Swap-Case
-- This block of code is represented on file named `swapeCase.js` when the file is runned it will outup a swaped case of a sentence.  
-
+This is a webpage for a user to purchse a ticket when they have choose a movie to buy and can be able to delete a movie when they want,
+for every movie they get a chance to read a description of what they will expect i ammovie
 ## How to Use
-
+*Hello for you to use/access youll pass some couple of requirments below, then continue with this instraction here:
+youll need to open the `index.html file on your browser and it will automatically load up the movie
 ### Requirements
 
 * A computer with a bash terminal and node installed.
@@ -37,11 +35,18 @@ This are three different project including (Swap-Case, Genarate-Array, Return-Pr
       npm install
     ```
 
-5. Run the application using
+5. Run the server using this lines
 
     ```bash
-      node index.js
+        npm install -g json-server
+        json-server --watch db.json
     ```
+
+6. Run the application using
+
+```bash
+    node index.js
+```
 
 ## Technologies Used
 

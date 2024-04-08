@@ -108,7 +108,7 @@ function updateMovieDesc(movies){
     button.innerText = availabiity;
 }
 
-// when the buyicket function is called is met to confirm if the are remaining tickets and if the tickets are available it can purchase ad take records of the tickets also
+// when the buyTicket function is called is met to confirm if the are remaining tickets and if the tickets are available it can purchase ad take records of the tickets also
 function buyTicket(movies){
     movies.tickets_sold++
     let ticketsSold = movies.tickets_sold;
@@ -152,6 +152,8 @@ function buyTicket(movies){
     })
     .catch (e => console.log(e.message));
 }
+
+//this function will delete  movie when clicked 
 function deleteMovie(movie){
     let requestHeaders = {
         "Content-Type": "application/json"
@@ -168,7 +170,3 @@ function deleteMovie(movie){
     .then (data => grabMovies())
     .catch (e => console.log(e.message));
 }
-
-
-
-//this page will allow user to see, search and comment something on the coins or even see the profits if invested on
