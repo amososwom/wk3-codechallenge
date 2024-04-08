@@ -12,8 +12,7 @@ let idTicketnum = document.getElementById("ticket-num")
 
 
 // when this function is called it grabes all the movies from the db.json endpoint and updates the DOM
-function grabMovies(updateDesc){
-    
+function grabMovies(updateDesc = true){
     ulFilms.innerHTML = "";
     fetch(url)
     .then(res => res.json())
@@ -23,9 +22,9 @@ function grabMovies(updateDesc){
                 updateMovieDesc(data[0]);
             }
 
-            for(values of data){
-                addMovie(values);
-            }
+            data.map(movie => {
+                addMovie(movie);
+            })
         }else{
             let liNoData = document.createElement("li");
             liNoData.innerText = "Seems Have no Movies at the Moment please Come back Later";
@@ -64,6 +63,7 @@ function addMovie(movies){
 
     let deleteButton = document.createElement("button");
     deleteButton.innerText = "Delete"
+    deleteButton.className = "movieDelete"
     liFilm.appendChild(deleteButton); 
 
     deleteButton.addEventListener('click', () => {
@@ -104,8 +104,7 @@ function updateMovieDesc(movies){
         }
     };
     idBuyticket.dataset.movieId = movies.id;
-    // let button = document.querySelector(`[data-movie-id="${movieId}"]`);
-    let button = document.querySelector("[data-movie-id='"+movieId+"']");
+    let button = document.querySelector(`[data-movie-id="${movieId}"]`);
     button.innerText = availabiity;
 }
 
@@ -170,3 +169,6 @@ function deleteMovie(movie){
     .catch (e => console.log(e.message));
 }
 
+
+
+//this page will allow user to see, search and comment something on the coins or even see the profits if invested on

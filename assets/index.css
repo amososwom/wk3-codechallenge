@@ -1,5 +1,13 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+  font-family:   system-ui; 
+  font-weight: 500;
+  }
 body {
-  background-color: #ebebeb;
+  background-color: #0d1117;
 }
 
 .heading {
@@ -53,3 +61,58 @@ img {
 #film-info {
   padding-bottom: 15px;
 }
+ul{
+  display: grid;
+  grid-template-columns: 1;
+  grid-auto-rows: 5em;
+  grid-gap: 0.5em;
+  /* background-color: red; */
+  max-height: 70vh !important;
+  overflow: auto;
+  padding: 0.6em !important;
+}
+li{
+  border: 1px solid grey;
+  border-radius: 7px;
+  display: grid !important;
+  gap: 10px;
+  padding: 0.5em !important;
+  transition: all 0.5s ease-in-out;
+}
+li:hover{
+  background-color: rgba(255, 255, 255, 0.2);
+}
+li span{
+  font-weight: 600;
+  font-size: 1.1em;
+  color: #fff;
+}
+
+.movieDelete{
+  width: auto;
+  padding: 0.4em 0.2em !important;
+  border-radius: 7px;
+  border: none;
+  color: red;
+}
+
+::-webkit-scrollbar{
+  width: 5px;
+  height: 7px;
+  }
+  ::-webkit-scrollbar-thumb{
+  background: linear-gradient( #ff5e0075, #ff5e00);
+  border-radius: 10px;
+  height: 60%;
+  
+  }
+  ::-webkit-scrollbar-thumb:hover{
+  background: linear-gradient( transparent, #00c6ff);
+  height: 60%;
+  }
+
+  #poster{
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+  }
