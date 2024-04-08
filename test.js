@@ -12,30 +12,16 @@ let idTicketnum = document.getElementById("ticket-num")
 
 
 function grabMovie(){
-    
-    ulFilms.innerHTML = "";
     fetch(url)
     .then(res => res.json())
     .then(data => { 
-        if(data.length > 0){
+        ulFilms.innerHTML = "";
         for(values of data){
              addMovie(values);
         }
-    }else{
-        let liNoData = document.createElement("li");
-        liNoData.innerText = "Seems Have no Movies at the Moment please Come back Later";
-        liNoData.style.color="red";
-        ulFilms.appendChild(liNoData);
-    }
         }
     )
-    .catch(e => {
-        console.log(e.message)
-        let liNoData = document.createElement("li");
-        liNoData.style.color="red";
-        liNoData.innerText = "We couldnt fetch Movies at the moment please try again later";
-        ulFilms.appendChild(liNoData);
-    });
+    .catch(e => console.log(e.message));
 }
 grabMovie();
 function addMovie(movies){
@@ -48,6 +34,7 @@ function addMovie(movies){
     if(!remaining > 0)
     {  liFilm.className = "sold-out"
     }
+
     ulFilms.appendChild(liFilm);
 
     let movieSpan = document.createElement("span");
@@ -75,7 +62,7 @@ function updateDom(movies){
     let availabiity;
 
     if(remaining > 0){
-        availabiity = "Buy Ticket"
+        availabiity = "Buy Tickt"
     }else{
         availabiity = "Sold out"
     }
@@ -97,11 +84,11 @@ function updateDom(movies){
         }
     };
     idBuyticket.dataset.movieId = movies.id;
-    // let button = document.querySelector(`[data-movie-id="${movieId}"]`);
     let button = document.querySelector("[data-movie-id='"+movieId+"']");
     button.innerText = availabiity;
 }
 function buyTicket(movies){
+
     movies.tickets_sold++
     let ticketsSold = movies.tickets_sold;
     let requestHeaders = {
@@ -158,5 +145,3 @@ function deleteMovie(movie){
     .then (data => grabMovie())
     .catch (e => console.log(e.message));
 }
-
-// if yoo using my code you need to update 1 things to work
