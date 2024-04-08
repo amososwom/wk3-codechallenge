@@ -11,22 +11,27 @@ let idShowtime = document.getElementById("showtime")
 let idTicketnum = document.getElementById("ticket-num")
 
 
-function grabMovie(){
+// when this function is called it grabes all the movies from the db.json endpoint and updates the DOM
+function grabMovies(updateDesc){
     
     ulFilms.innerHTML = "";
     fetch(url)
     .then(res => res.json())
     .then(data => { 
         if(data.length > 0){
-        for(values of data){
-             addMovie(values);
+            if(updateDesc){
+                updateMovieDesc(data[0]);
+            }
+
+            for(values of data){
+                addMovie(values);
+            }
+        }else{
+            let liNoData = document.createElement("li");
+            liNoData.innerText = "Seems Have no Movies at the Moment please Come back Later";
+            liNoData.style.color="red";
+            ulFilms.appendChild(liNoData);
         }
-    }else{
-        let liNoData = document.createElement("li");
-        liNoData.innerText = "Seems Have no Movies at the Moment please Come back Later";
-        liNoData.style.color="red";
-        ulFilms.appendChild(liNoData);
-    }
         }
     )
     .catch(e => {
@@ -37,7 +42,10 @@ function grabMovie(){
         ulFilms.appendChild(liNoData);
     });
 }
-grabMovie();
+// this funcxtion is called by default when the site is opened 
+grabMovies(true);
+
+//this funcion updates the title of the movies in left list ul parent
 function addMovie(movies){
     
     let remaining = movies.capacity - movies.tickets_sold;
@@ -62,14 +70,13 @@ function addMovie(movies){
         deleteMovie(movies)
     })
     movieSpan.addEventListener('click', () => {
-        updateDom(movies);
+        updateMovieDesc(movies);
     })
-    if(movies.id === "1"){
-        updateDom(movies);
-    }
 }
 
-function updateDom(movies){
+
+// when this function is called it updates the image div and more information on the next div 
+function updateMovieDesc(movies){
     let remaining = movies.capacity - movies.tickets_sold;
     let movieId = movies.id;
     let availabiity;
@@ -93,7 +100,7 @@ function updateDom(movies){
         { 
              buyTicket(movies)
         }else{
-            console.log("You cannot buy tickets")
+            alert("Opps Ticket is Sold Out already !!")
         }
     };
     idBuyticket.dataset.movieId = movies.id;
@@ -101,6 +108,8 @@ function updateDom(movies){
     let button = document.querySelector("[data-movie-id='"+movieId+"']");
     button.innerText = availabiity;
 }
+
+// when the buyicket function is called is met to confirm if the are remaining tickets and if the tickets are available it can purchase ad take records of the tickets also
 function buyTicket(movies){
     movies.tickets_sold++
     let ticketsSold = movies.tickets_sold;
@@ -117,12 +126,14 @@ function buyTicket(movies){
     })
     .then (res => res.json())
     .then (data => {
-        updateDom(data);
+        updateMovieDesc(data);
 
         let numberOfTickets = (data.capacity - data.tickets_sold)
 
         if(!numberOfTickets > 0)
-        { grabMovie()
+        { 
+            ulFilms.innerHTML = "";
+            grabMovies(false)
         }
 
         let  RequestBodyTickets =  {
@@ -155,10 +166,7 @@ function deleteMovie(movie){
         body: JSON.stringify(requestBody)
     })
     .then (res => res.json())
-    .then (data => grabMovie())
+    .then (data => grabMovies())
     .catch (e => console.log(e.message));
 }
-
-
-// git remote add origin <git@github.com:amososwom/wk3-codechallenge.git>
 
