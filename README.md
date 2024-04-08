@@ -8,8 +8,8 @@
 This is a webpage for a user to purchse a ticket when they have choose a movie to buy and can be able to delete a movie when they want,
 for every movie they get a chance to read a description of what they will expect i ammovie
 ## How to Use
-*Hello for you to use/access youll pass some couple of requirments below, then continue with this instraction here:
-youll need to open the `index.html file on your browser and it will automatically load up the movie
+*Hello for you to use/access youll pass some couple of requirments below, then continue with this instruction here:
+youll need to open the `index.html` file on your browser and it will automatically load up the movie
 ### Requirements
 
 * A computer with a bash terminal and node installed.

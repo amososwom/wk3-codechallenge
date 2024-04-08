@@ -54,6 +54,7 @@ function addMovie(movies){
     let liFilm = document.createElement("li");
     if(!remaining > 0)
     {  liFilm.className = "sold-out"
+        liFilm.style.backgroundColor = "rgba(255, 0, 0, 0.2";
     }
     ulFilms.appendChild(liFilm);
 
